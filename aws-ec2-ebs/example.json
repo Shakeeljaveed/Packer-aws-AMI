@@ -1,0 +1,24 @@
+{
+  "variables": {
+    "aws_access_key": "Your Access key",
+    "aws_secret_key": "Your Secret key"
+  },
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "access_key": "{{user `aws_access_key`}}",
+      "secret_key": "{{user `aws_secret_key`}}",
+      "region": "Region you need to create",
+      "source_ami": "ami-41e9c52e",
+      "instance_type": "Type you need",
+      "ssh_username": "ubuntu",
+      "ami_name": "packer-example {{timestamp}}"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "script": "provision.sh"
+    }
+  ]
+}
