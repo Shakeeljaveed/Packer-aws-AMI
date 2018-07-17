@@ -7,7 +7,7 @@ This creates an AMI using the AWS builder
 # To Install Packer
 URL: https://www.packer.io/docs/installation.html
 
-#create a x.509 self signed certificate 
+# Create a x.509 self signed certificate 
 And Mention the crt and key file in the json  file
 
 # General Packer Info
